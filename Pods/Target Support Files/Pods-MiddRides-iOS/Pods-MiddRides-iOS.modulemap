@@ -1,0 +1,6 @@
+framework module Pods_MiddRides_iOS {
+  umbrella header "Pods-MiddRides-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

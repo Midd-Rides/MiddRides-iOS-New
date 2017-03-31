@@ -1,0 +1,6 @@
+framework module Pods_MiddRides_iOSUITests {
+  umbrella header "Pods-MiddRides-iOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
