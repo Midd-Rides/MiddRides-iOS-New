@@ -10,8 +10,10 @@
 		167AD5CF58D287D597951668 /* Pods_MiddRides_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFA6F2405B1D49C5C1CCC79 /* Pods_MiddRides_iOSUITests.framework */; };
 		CAC9BBB4AE6D657174B3AB18 /* Pods_MiddRides_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAAC7983D6C2539FC8EB5AC /* Pods_MiddRides_iOS.framework */; };
 		D00FB09F4FAD4EBF4AEBFCC8 /* Pods_MiddRides_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09404CABBE867351FD8384B6 /* Pods_MiddRides_iOSTests.framework */; };
+		D036DE471E8E18A9002AB195 /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036DE461E8E18A9002AB195 /* NetworkUtil.swift */; };
+		D036DE4A1E8E2267002AB195 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036DE491E8E2267002AB195 /* Constants.swift */; };
 		D057FF8A1E8DA4E700EB3479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FF891E8DA4E700EB3479 /* AppDelegate.swift */; };
-		D057FF8C1E8DA4E700EB3479 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FF8B1E8DA4E700EB3479 /* ViewController.swift */; };
+		D057FF8C1E8DA4E700EB3479 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FF8B1E8DA4E700EB3479 /* LoginViewController.swift */; };
 		D057FF8F1E8DA4E700EB3479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D057FF8D1E8DA4E700EB3479 /* Main.storyboard */; };
 		D057FF911E8DA4E700EB3479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D057FF901E8DA4E700EB3479 /* Assets.xcassets */; };
 		D057FF941E8DA4E700EB3479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D057FF921E8DA4E700EB3479 /* LaunchScreen.storyboard */; };
@@ -46,9 +48,11 @@
 		7C1F68E9A5A3CCE63B540455 /* Pods-MiddRides-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddRides-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiddRides-iOSTests/Pods-MiddRides-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1CF463D8C83A4A92F3D79FF /* Pods-MiddRides-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddRides-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiddRides-iOSUITests/Pods-MiddRides-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B66A322B6CE0FA6F495A3865 /* Pods-MiddRides-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddRides-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiddRides-iOS/Pods-MiddRides-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D036DE461E8E18A9002AB195 /* NetworkUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
+		D036DE491E8E2267002AB195 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D057FF861E8DA4E700EB3479 /* MiddRides-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiddRides-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D057FF891E8DA4E700EB3479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D057FF8B1E8DA4E700EB3479 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D057FF8B1E8DA4E700EB3479 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D057FF8E1E8DA4E700EB3479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D057FF901E8DA4E700EB3479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D057FF931E8DA4E700EB3479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,6 +105,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D036DE481E8E2257002AB195 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				D036DE491E8E2267002AB195 /* Constants.swift */,
+			);
+			name = Secrets;
+			sourceTree = "<group>";
+		};
 		D057FF7D1E8DA4E700EB3479 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +138,7 @@
 		D057FF881E8DA4E700EB3479 /* MiddRides-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D036DE481E8E2257002AB195 /* Secrets */,
 				D057FFB81E8DA66800EB3479 /* Utils */,
 				D057FFB71E8DA5EA00EB3479 /* ViewControllers */,
 				D057FF891E8DA4E700EB3479 /* AppDelegate.swift */,
@@ -158,7 +171,7 @@
 		D057FFB71E8DA5EA00EB3479 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D057FF8B1E8DA4E700EB3479 /* ViewController.swift */,
+				D057FF8B1E8DA4E700EB3479 /* LoginViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -167,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				D057FFB91E8DA69E00EB3479 /* RequestUtil.swift */,
+				D036DE461E8E18A9002AB195 /* NetworkUtil.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -468,7 +482,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D057FF8C1E8DA4E700EB3479 /* ViewController.swift in Sources */,
+				D036DE4A1E8E2267002AB195 /* Constants.swift in Sources */,
+				D036DE471E8E18A9002AB195 /* NetworkUtil.swift in Sources */,
+				D057FF8C1E8DA4E700EB3479 /* LoginViewController.swift in Sources */,
 				D057FFBA1E8DA69E00EB3479 /* RequestUtil.swift in Sources */,
 				D057FF8A1E8DA4E700EB3479 /* AppDelegate.swift in Sources */,
 			);
