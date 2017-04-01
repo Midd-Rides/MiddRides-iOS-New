@@ -26,20 +26,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwdField.delegate = self
         
         // first check if the server is running
-        emailField.isEnabled = false
-        passwdField.isEnabled = false
+        loginButton.isEnabled = false
         agent.isServiceRunning(callback: {
             response in
             guard let jsonData = DataUtil.extractJsonFromResponse(response) else {
-                // TODO: notify, and wait
+                AppUtil.displayAlertMessage(title: "Error", msg: "There is an error with the server", action: UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil), context: self)
                 return
             }
             
             if jsonData["status"] as! Bool == true {
-                self.emailField.isEnabled = true
-                self.passwdField.isEnabled = true
+                self.loginButton.isEnabled = true
             } else {
-                
+                AppUtil.displayAlertMessage(title: nil, msg: "MiddRides is not running currently", action: nil, context: self)
             }
         })
         

@@ -21,6 +21,7 @@
 		D057FFBA1E8DA69E00EB3479 /* RequestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FFB91E8DA69E00EB3479 /* RequestUtil.swift */; };
 		D08EC7401E8F65AB00941054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08EC73F1E8F65AB00941054 /* Assets.xcassets */; };
 		D08EC7421E8F80DC00941054 /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08EC7411E8F80DC00941054 /* DataUtil.swift */; };
+		D08EC7441E8F86D200941054 /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08EC7431E8F86D200941054 /* AppUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		D057FFB91E8DA69E00EB3479 /* RequestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUtil.swift; sourceTree = "<group>"; };
 		D08EC73F1E8F65AB00941054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D08EC7411E8F80DC00941054 /* DataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
+		D08EC7431E8F86D200941054 /* AppUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtil.swift; sourceTree = "<group>"; };
 		EBAAC7983D6C2539FC8EB5AC /* Pods_MiddRides_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiddRides_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 				D057FFB91E8DA69E00EB3479 /* RequestUtil.swift */,
 				D036DE461E8E18A9002AB195 /* NetworkUtil.swift */,
 				D08EC7411E8F80DC00941054 /* DataUtil.swift */,
+				D08EC7431E8F86D200941054 /* AppUtil.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			files = (
 				D036DE4A1E8E2267002AB195 /* Privacy.swift in Sources */,
 				D08EC7421E8F80DC00941054 /* DataUtil.swift in Sources */,
+				D08EC7441E8F86D200941054 /* AppUtil.swift in Sources */,
 				D036DE471E8E18A9002AB195 /* NetworkUtil.swift in Sources */,
 				D057FF8C1E8DA4E700EB3479 /* LoginViewController.swift in Sources */,
 				D057FFBA1E8DA69E00EB3479 /* RequestUtil.swift in Sources */,
