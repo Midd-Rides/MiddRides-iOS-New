@@ -44,7 +44,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        login()
+        if validateCredentials() {
+            login()
+        }
     }
     
     @IBAction func didTouchOutside(_ sender: UITapGestureRecognizer) {
@@ -52,7 +54,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func login() {
-        // TODO: check for values
+        // TODO: make login request
+    }
+    
+    private func validateCredentials() -> Bool {
+        // general email format
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        if !emailTest.evaluate(with: emailField.text) {
+            AppUtil.displayAlertMessage(title: "Format Error", msg: "Email format incorrect", action: UIAlertAction(title: "OK", style: .default), context: self)
+            return false
+        }
+        // check for Middlebury email
+        if !emailField.text!.hasSuffix("middlebury.edu") {
+            AppUtil.displayAlertMessage(title: "Format Error", msg: "Please use a Middlebury email", action: UIAlertAction(title: "OK", style: .default), context: self)
+            return false
+        }
+        // check for password length
+        if passwdField.text!.characters.count < 6 {
+            AppUtil.displayAlertMessage(title: "Format Error", msg: "Password too short", action: UIAlertAction(title: "OK", style: .default), context: self)
+            return false
+        }
+        
+        return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
