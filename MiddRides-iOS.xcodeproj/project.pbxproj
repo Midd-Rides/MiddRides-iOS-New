@@ -10,6 +10,7 @@
 		167AD5CF58D287D597951668 /* Pods_MiddRides_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFA6F2405B1D49C5C1CCC79 /* Pods_MiddRides_iOSUITests.framework */; };
 		CAC9BBB4AE6D657174B3AB18 /* Pods_MiddRides_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAAC7983D6C2539FC8EB5AC /* Pods_MiddRides_iOS.framework */; };
 		D00FB09F4FAD4EBF4AEBFCC8 /* Pods_MiddRides_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09404CABBE867351FD8384B6 /* Pods_MiddRides_iOSTests.framework */; };
+		D021184B1EA0A5F800EE8C2D /* en-us.strings in Resources */ = {isa = PBXBuildFile; fileRef = D021184A1EA0A5F800EE8C2D /* en-us.strings */; };
 		D036DE471E8E18A9002AB195 /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036DE461E8E18A9002AB195 /* NetworkUtil.swift */; };
 		D036DE4A1E8E2267002AB195 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036DE491E8E2267002AB195 /* Privacy.swift */; };
 		D057FF8A1E8DA4E700EB3479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FF891E8DA4E700EB3479 /* AppDelegate.swift */; };
@@ -18,7 +19,7 @@
 		D057FF941E8DA4E700EB3479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D057FF921E8DA4E700EB3479 /* LaunchScreen.storyboard */; };
 		D057FF9F1E8DA4E700EB3479 /* MiddRides_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FF9E1E8DA4E700EB3479 /* MiddRides_iOSTests.swift */; };
 		D057FFAA1E8DA4E700EB3479 /* MiddRides_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FFA91E8DA4E700EB3479 /* MiddRides_iOSUITests.swift */; };
-		D057FFBA1E8DA69E00EB3479 /* RequestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FFB91E8DA69E00EB3479 /* RequestUtil.swift */; };
+		D057FFBA1E8DA69E00EB3479 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FFB91E8DA69E00EB3479 /* Constants.swift */; };
 		D08EC7401E8F65AB00941054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08EC73F1E8F65AB00941054 /* Assets.xcassets */; };
 		D08EC7421E8F80DC00941054 /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08EC7411E8F80DC00941054 /* DataUtil.swift */; };
 		D08EC7441E8F86D200941054 /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08EC7431E8F86D200941054 /* AppUtil.swift */; };
@@ -50,6 +51,7 @@
 		7C1F68E9A5A3CCE63B540455 /* Pods-MiddRides-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddRides-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiddRides-iOSTests/Pods-MiddRides-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1CF463D8C83A4A92F3D79FF /* Pods-MiddRides-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddRides-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiddRides-iOSUITests/Pods-MiddRides-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B66A322B6CE0FA6F495A3865 /* Pods-MiddRides-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddRides-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiddRides-iOS/Pods-MiddRides-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D021184A1EA0A5F800EE8C2D /* en-us.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "en-us.strings"; sourceTree = "<group>"; };
 		D036DE461E8E18A9002AB195 /* NetworkUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
 		D036DE491E8E2267002AB195 /* Privacy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
 		D057FF861E8DA4E700EB3479 /* MiddRides-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiddRides-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +66,7 @@
 		D057FFA51E8DA4E700EB3479 /* MiddRides-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MiddRides-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D057FFA91E8DA4E700EB3479 /* MiddRides_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddRides_iOSUITests.swift; sourceTree = "<group>"; };
 		D057FFAB1E8DA4E700EB3479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D057FFB91E8DA69E00EB3479 /* RequestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUtil.swift; sourceTree = "<group>"; };
+		D057FFB91E8DA69E00EB3479 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D08EC73F1E8F65AB00941054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D08EC7411E8F80DC00941054 /* DataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
 		D08EC7431E8F86D200941054 /* AppUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtil.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				D08EC73F1E8F65AB00941054 /* Assets.xcassets */,
 				D057FF921E8DA4E700EB3479 /* LaunchScreen.storyboard */,
 				D057FF951E8DA4E700EB3479 /* Info.plist */,
+				D021184A1EA0A5F800EE8C2D /* en-us.strings */,
 			);
 			path = "MiddRides-iOS";
 			sourceTree = "<group>";
@@ -183,7 +186,7 @@
 		D057FFB81E8DA66800EB3479 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D057FFB91E8DA69E00EB3479 /* RequestUtil.swift */,
+				D057FFB91E8DA69E00EB3479 /* Constants.swift */,
 				D036DE461E8E18A9002AB195 /* NetworkUtil.swift */,
 				D08EC7411E8F80DC00941054 /* DataUtil.swift */,
 				D08EC7431E8F86D200941054 /* AppUtil.swift */,
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D057FF941E8DA4E700EB3479 /* LaunchScreen.storyboard in Resources */,
+				D021184B1EA0A5F800EE8C2D /* en-us.strings in Resources */,
 				D08EC7401E8F65AB00941054 /* Assets.xcassets in Resources */,
 				D057FF8F1E8DA4E700EB3479 /* Main.storyboard in Resources */,
 			);
@@ -493,7 +497,7 @@
 				D08EC7441E8F86D200941054 /* AppUtil.swift in Sources */,
 				D036DE471E8E18A9002AB195 /* NetworkUtil.swift in Sources */,
 				D057FF8C1E8DA4E700EB3479 /* LoginViewController.swift in Sources */,
-				D057FFBA1E8DA69E00EB3479 /* RequestUtil.swift in Sources */,
+				D057FFBA1E8DA69E00EB3479 /* Constants.swift in Sources */,
 				D057FF8A1E8DA4E700EB3479 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

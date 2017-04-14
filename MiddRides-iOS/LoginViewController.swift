@@ -31,6 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             response in
             guard let jsonData = DataUtil.extractJsonFromResponse(response) else {
                 AppUtil.displayAlertMessage(title: "Error", msg: "There is an error with the server", action: UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil), context: self)
+                self.loginButton.isEnabled = true
                 return
             }
             
@@ -54,7 +55,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func login() {
-        // TODO: make login request
+        agent.attemptLoggingIn(email: emailField.text!, password: passwdField.text!, callback: {
+            response in
+            guard let jsonData = DataUtil.extractJsonFromResponse(response) else {
+                AppUtil.displayAlertMessage(title: "Login Failed", msg: "Failed to log in for unknown reasons", action: UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil), context: self);
+                return
+            }
+            
+            print(jsonData)
+            if (jsonData["error"] as! String) == "" || (jsonData["error"] as! String).characters.count <= 0 {
+                // TODO: log in successful
+            } else {
+                AppUtil.displayAlertMessage(title: "Error", msg: (jsonData["error"] as! String), action: UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil), context: self)
+            }
+        })
     }
     
     private func validateCredentials() -> Bool {
