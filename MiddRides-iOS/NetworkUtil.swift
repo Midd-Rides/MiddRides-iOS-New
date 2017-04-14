@@ -21,7 +21,6 @@ class NetworkUtil {
     /// Check if server is running
     /// @param callback     (DataResponse<Any>) -> Void
     public func isServiceRunning(callback: @escaping (DataResponse<Any>) -> Void) {
-        print(Constants.INDEX_URL)
         Alamofire.request(Constants.INDEX_URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: callback)
     }
     

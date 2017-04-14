@@ -11,6 +11,7 @@
 		CAC9BBB4AE6D657174B3AB18 /* Pods_MiddRides_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAAC7983D6C2539FC8EB5AC /* Pods_MiddRides_iOS.framework */; };
 		D00FB09F4FAD4EBF4AEBFCC8 /* Pods_MiddRides_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09404CABBE867351FD8384B6 /* Pods_MiddRides_iOSTests.framework */; };
 		D021184B1EA0A5F800EE8C2D /* en-us.strings in Resources */ = {isa = PBXBuildFile; fileRef = D021184A1EA0A5F800EE8C2D /* en-us.strings */; };
+		D021184D1EA0AE0B00EE8C2D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021184C1EA0AE0B00EE8C2D /* RegisterViewController.swift */; };
 		D036DE471E8E18A9002AB195 /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036DE461E8E18A9002AB195 /* NetworkUtil.swift */; };
 		D036DE4A1E8E2267002AB195 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036DE491E8E2267002AB195 /* Privacy.swift */; };
 		D057FF8A1E8DA4E700EB3479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FF891E8DA4E700EB3479 /* AppDelegate.swift */; };
@@ -52,6 +53,7 @@
 		A1CF463D8C83A4A92F3D79FF /* Pods-MiddRides-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddRides-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiddRides-iOSUITests/Pods-MiddRides-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B66A322B6CE0FA6F495A3865 /* Pods-MiddRides-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddRides-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiddRides-iOS/Pods-MiddRides-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D021184A1EA0A5F800EE8C2D /* en-us.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "en-us.strings"; sourceTree = "<group>"; };
+		D021184C1EA0AE0B00EE8C2D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D036DE461E8E18A9002AB195 /* NetworkUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
 		D036DE491E8E2267002AB195 /* Privacy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
 		D057FF861E8DA4E700EB3479 /* MiddRides-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiddRides-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				D057FF8B1E8DA4E700EB3479 /* LoginViewController.swift */,
+				D021184C1EA0AE0B00EE8C2D /* RegisterViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				D036DE4A1E8E2267002AB195 /* Privacy.swift in Sources */,
 				D08EC7421E8F80DC00941054 /* DataUtil.swift in Sources */,
 				D08EC7441E8F86D200941054 /* AppUtil.swift in Sources */,
+				D021184D1EA0AE0B00EE8C2D /* RegisterViewController.swift in Sources */,
 				D036DE471E8E18A9002AB195 /* NetworkUtil.swift in Sources */,
 				D057FF8C1E8DA4E700EB3479 /* LoginViewController.swift in Sources */,
 				D057FFBA1E8DA69E00EB3479 /* Constants.swift in Sources */,

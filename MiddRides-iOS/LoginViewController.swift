@@ -62,7 +62,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 return
             }
             
-            print(jsonData)
+            // check for errors
             if (jsonData["error"] as! String) == "" || (jsonData["error"] as! String).characters.count <= 0 {
                 // TODO: log in successful
             } else {
@@ -100,6 +100,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         return true
     }
+    
+    // destination of unwind segue
+    @IBAction func prepareUnwind(segue: UIStoryboardSegue) {}
 
 }
 
