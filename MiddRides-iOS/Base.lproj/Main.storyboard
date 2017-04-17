@@ -173,7 +173,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTt-HH-mas">
                                 <rect key="frame" x="16" y="227" width="343" height="30"/>
@@ -198,6 +198,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="unwindToLoginView:" destination="sxB-h4-ASF" eventType="touchUpInside" id="XX3-ns-kxD"/>
                                     <segue destination="joZ-Vl-V8T" kind="unwind" identifier="unwindToLoginView" unwindAction="prepareUnwindWithSegue:" id="VbD-5v-3ng"/>
                                 </connections>
                             </button>
@@ -213,11 +214,12 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5W-dT-3Z9"/>
+                                    <action selector="registerButtonPressed:" destination="sxB-h4-ASF" eventType="touchUpInside" id="26t-kt-ECY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.20784313725490194" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vTt-HH-mas" firstAttribute="centerX" secondItem="tf2-hv-kx3" secondAttribute="centerX" id="2jY-Ns-nar"/>
                             <constraint firstItem="XJO-pe-OnY" firstAttribute="centerX" secondItem="tf2-hv-kx3" secondAttribute="centerX" id="4Vk-8O-UH0"/>
@@ -234,11 +236,26 @@
                             <constraint firstItem="YP0-fT-hWz" firstAttribute="leading" secondItem="tf2-hv-kx3" secondAttribute="leadingMargin" constant="72" id="ukM-Hw-g7b"/>
                             <constraint firstItem="vTt-HH-mas" firstAttribute="top" secondItem="syi-zq-DQ8" secondAttribute="bottom" constant="8" id="yMP-ew-Wpd"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="c65-Nx-tOb" appends="YES" id="WAy-kF-14a"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="8AV-fa-nCK"/>
+                    <connections>
+                        <outlet property="backToLoginButton" destination="5gi-Ud-sj3" id="2UH-tR-THN"/>
+                        <outlet property="confirmField" destination="vTt-HH-mas" id="uGM-Wa-Yqs"/>
+                        <outlet property="emailField" destination="UVS-zd-osM" id="jMG-gT-GgF"/>
+                        <outlet property="passwdField" destination="syi-zq-DQ8" id="qth-xf-sw6"/>
+                        <outlet property="registerButton" destination="XJO-pe-OnY" id="Ehg-aD-aLs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzQ-BJ-xub" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="joZ-Vl-V8T" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="c65-Nx-tOb">
+                    <connections>
+                        <action selector="didTouchOutside:" destination="sxB-h4-ASF" id="Eqn-9G-Cmq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="33" y="804"/>
         </scene>

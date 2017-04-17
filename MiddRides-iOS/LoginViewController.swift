@@ -71,6 +71,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
+    // check if all inputs meet format requirements
     private func validateCredentials() -> Bool {
         // general email format
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"

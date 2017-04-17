@@ -31,7 +31,18 @@ class NetworkUtil {
     public func attemptLoggingIn(email: String, password: String,
                                 callback: @escaping (DataResponse<Any>) -> Void) {
         let bodyParams = ["email": email,
-                      "password": password]
+                          "password": password]
         Alamofire.request(Constants.LOGIN_URL, method: .post, parameters: bodyParams, encoding: URLEncoding.httpBody, headers: nil).responseJSON(completionHandler: callback)
+    }
+    
+    /// Attemps to register
+    /// @param email        String
+    /// @param password     String
+    /// @param callback     (DataResponse<Any>) -> Void
+    public func attemptRegistering(email: String, password: String,
+                                   callback: @escaping (DataResponse<Any>) -> Void) {
+        let bodyParams = ["email": email,
+                          "password": password]
+        Alamofire.request(Constants.REGISTER_URL, method: .post, parameters: bodyParams, encoding: URLEncoding.httpBody, headers: nil).responseJSON(completionHandler: callback)
     }
 }
