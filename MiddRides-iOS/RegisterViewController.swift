@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func register() {
-        agent.attemptRegistering(email: emailField.text!, password: passwdField.text!, callback: {
+        agent.attemptRegistering(email: emailField.text!, password: Privacy.encodePassword(passwordToEncode: passwdField.text!), callback: {
             response in
             guard let jsonData = DataUtil.extractJsonFromResponse(response) else {
                 AppUtil.displayAlertMessage(title: "Register Failed", msg: "Failed to register for unknown reasons", action: UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil), context: self);
@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             
             // check for errors
             if (jsonData["error"] as! String) == "" || (jsonData["error"] as! String).characters.count <= 0 {
-                // TODO: register successful
+                self.performSegue(withIdentifier: "fromRegisterToMain", sender: nil);
             } else {
                 AppUtil.displayAlertMessage(title: "Error", msg: (jsonData["error"] as! String), action: UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil), context: self)
             }

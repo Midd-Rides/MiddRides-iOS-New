@@ -55,7 +55,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func login() {
-        agent.attemptLoggingIn(email: emailField.text!, password: passwdField.text!, callback: {
+        agent.attemptLoggingIn(email: emailField.text!, password: Privacy.encodePassword(passwordToEncode: passwdField.text!), callback: {
             response in
             guard let jsonData = DataUtil.extractJsonFromResponse(response) else {
                 AppUtil.displayAlertMessage(title: "Login Failed", msg: "Failed to log in for unknown reasons", action: UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil), context: self);
@@ -64,7 +64,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             // check for errors
             if (jsonData["error"] as! String) == "" || (jsonData["error"] as! String).characters.count <= 0 {
-                // TODO: log in successful
+                self.performSegue(withIdentifier: "fromLoginToMain", sender: nil);
             } else {
                 AppUtil.displayAlertMessage(title: "Error", msg: (jsonData["error"] as! String), action: UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil), context: self)
             }
