@@ -15,7 +15,7 @@ class NetworkUtil {
     private init() {}
     
     public static func getInstance() -> NetworkUtil {
-        return sharedInstance;
+        return sharedInstance
     }
     
     /// Check if server is running
