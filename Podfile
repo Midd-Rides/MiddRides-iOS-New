@@ -7,7 +7,7 @@ target 'MiddRides-iOS' do
 	use_frameworks!
 
 	# Pods for MiddRides-iOS
-	pod 'Alamofire', '~> 4.4'
+	pod 'Alamofire', '~> 4.5'
 
 	target 'MiddRides-iOSTests' do
 		inherit! :search_paths
